@@ -1,3 +1,5 @@
+import os
+
 import cherrypy
 
 
@@ -7,4 +9,12 @@ class NaminThingsIsHard(object):
         return "Hello World!"
 
 
-cherrypy.quickstart(NaminThingsIsHard())
+cherrypy.tree.mount(NaminThingsIsHard(), '/', config={
+    '/': {
+        'tools.staticdir.on': True,
+        'tools.staticdir.dir': os.path.abspath(os.path.dirname(__file__)),
+        'tools.staticdir.index': 'index.html',
+    },
+})
+
+cherrypy.engine.start()
