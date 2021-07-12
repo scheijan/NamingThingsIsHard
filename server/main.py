@@ -5,7 +5,7 @@ import cherrypy
 
 class NaminThingsIsHard(object):
     @cherrypy.expose
-    def index(self):
+    def foo(self):
         return "Hello World!"
 
 
