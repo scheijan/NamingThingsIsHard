@@ -7,12 +7,18 @@
 	<link href="/static/css/rpgui/rpgui.css" rel="stylesheet" type="text/css" >
 	<script src="/static/css/rpgui/rpgui.js"></script>
 	<link rel="stylesheet" type="text/css" href="/static/css/main.css">
+	<script src="/static/js/main.js"></script>
 </head>
 <body>
 	<div class="rpgui-content">
 		<div class="main">
 			<div class="mapSection rpgui-container framed">
-				<img src="/static/images/map.jpg" class="map">	
+				<img src="/static/images/map.jpg" class="map" usemap="#map">
+				<map name="map">
+					<area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+					<area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+					<area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+				  </map>	
 			</div>
 			<div class="menuSection">
 				<div class="rpgui-container framed menu">
@@ -50,10 +56,10 @@
 
 					<table class="menuTable" table-layout="fixed">
 						<tr>
-							<td width="5%"><p>0</p></td>
-							<td width="55%"><input type="range" name="buyAmountRange" class="rpgui-slider" min="0" max="1000" value="500"></td>
-							<td width="15%"><p>1000</p></td>
-							<td width="20%"><input name="buyAmount"/></td>
+							<td width="5%">1</td>
+							<td width="55%"><input type="range" name="buyAmountRange" class="rpgui-slider" min="1" max="1000" value="500" onchange="onSliderChange('buy', this.value)"></td>
+							<td width="15%">1000</td>
+							<td width="20%"><input name="buyAmount" value="500" onchange="onInputChange('buy', this.value)"/></td>
 						</tr>
 						<tr>
 							<td colspan="5" align="center">
@@ -64,10 +70,10 @@
 					<hr/>
 					<table class="menuTable" table-layout="fixed">
 						<tr>
-							<td width="5%"><p>0</p></td>
-							<td width="55%"><input type="range" name="sellAmountRange" class="rpgui-slider" min="0" max="1000" value="500"></td>
-							<td width="15%"><p>1000</p></td>
-							<td width="20%"><input name="sellAmount"/></td>
+							<td width="5%">1</td>
+							<td width="55%"><input type="range" name="sellAmountRange" class="rpgui-slider" min="1" max="1000" value="500" onchange="onSliderChange('sell', this.value)"></td>
+							<td width="15%">1000</td>
+							<td width="20%"><input name="sellAmount" value="500" onchange="onInputChange('buy', this.value)"/></td>
 						</tr>
 						<tr>
 							<td colspan="5" align="center">
