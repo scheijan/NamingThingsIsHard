@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+0<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -10,11 +10,80 @@
 </head>
 <body>
 	<div class="rpgui-content">
-		<div class="mapSection">
-			<img src="/static/images/map.jpg" class="map">	
-		</div>
-		<div class="menuSection">
-			<p>menu</p>
+		<div class="main">
+			<div class="mapSection rpgui-container framed">
+				<img src="/static/images/map.jpg" class="map">	
+			</div>
+			<div class="menuSection">
+				<div class="rpgui-container framed menu">
+					<h3>General Information</h3>
+					<table class="menuTable">
+						<tr>
+							<td><p>Name:</p></td>
+							<td><p>foobar</p></td>
+						</tr>
+						<tr>
+							<td><p>Turn:</p></td>
+							<td><p>23</p></td>
+						</tr>
+						<tr>
+							<td><p>Gold:</p></td>
+							<td><p>23232</p></td>
+						</tr>
+						<tr>
+							<td><p>Debt:</p></td>
+							<td><p>12345</p></td>
+						</tr>
+					</table>
+				</div>
+				<div class="rpgui-container framed menu">
+					<h3>Buy / Sell</h3>
+
+					<table class="menuTable" >
+						<tr>
+							<td width="50%"><p><input class="rpgui-radio" type="radio" name="type" value="1"><label>foo</label> </p></td>
+							<td width="50%"><p><input class="rpgui-radio" type="radio" name="type" value="2"><label>foo</label> </p></td>
+						</tr>
+						
+
+					</table>
+
+					<table class="menuTable" table-layout="fixed">
+						<tr>
+							<td width="5%"><p>0</p></td>
+							<td width="55%"><input type="range" name="buyAmountRange" class="rpgui-slider" min="0" max="1000" value="500"></td>
+							<td width="15%"><p>1000</p></td>
+							<td width="20%"><input name="buyAmount"/></td>
+						</tr>
+						<tr>
+							<td colspan="5" align="center">
+								<button class="rpgui-button" name="buyButton">Buy</button>
+							</td>
+						</tr>
+					</table>
+					<hr/>
+					<table class="menuTable" table-layout="fixed">
+						<tr>
+							<td width="5%"><p>0</p></td>
+							<td width="55%"><input type="range" name="sellAmountRange" class="rpgui-slider" min="0" max="1000" value="500"></td>
+							<td width="15%"><p>1000</p></td>
+							<td width="20%"><input name="sellAmount"/></td>
+						</tr>
+						<tr>
+							<td colspan="5" align="center">
+								<button class="rpgui-button" name="sellButton">Sell</button>
+							</td>
+						</tr>
+					</table>
+
+				</div>
+				<div class="rpgui-container framed menu">
+					<h3>Actions</h3>
+					<p align="center"><button class="rpgui-button button">foo</button></p>
+					<p align="center"><button class="rpgui-button button">bar</button></p>
+					
+				</div>
+			</div> 
 		</div>
 	</div>
 </body>

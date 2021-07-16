@@ -2,17 +2,40 @@ body {
   	background-color: black;
 }
 
+.main {
+	
+}
+
 .map {
-	/* width: 90%;
+	width: 100%;
 	height: 900px;
-	margin-left: 5%; */
 }
 
 .mapSection {
 	float: left;
-	width: 60%;
+	width: 70%;
+	padding: 0 !important;
+	margin: 10px;
 }
 
 .menuSection {
 	float: right;
+	position: relative;
+	width: 28%;
+	align-content: center;
+	padding: 0 !important;
+	margin: 10px;
+	margin-rigt: 30px;
+}
+
+.menu {
+	position: relative;
+}
+
+.menuTable {
+	margin-left: 20px;
+}
+
+.button {
+	width: 400px;
 }
