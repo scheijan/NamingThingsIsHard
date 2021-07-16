@@ -3,7 +3,16 @@ body {
 }
 
 .map {
-	width: 90%;
+	/* width: 90%;
 	height: 900px;
-	margin-left: 5%;
+	margin-left: 5%; */
+}
+
+.mapSection {
+	float: left;
+	width: 60%;
+}
+
+.menuSection {
+	float: right;
 }
